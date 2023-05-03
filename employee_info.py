@@ -22,7 +22,12 @@ def calculate_average_salary():
     total = 0
     average = 0
 
-    #add your implementation to calculate here
+    # Add your implementation from here
+    people = len(employee_data)
+
+    for item in employee_data:
+        total += int(item["salary"])
+    average = total/people
 
 
     return average
@@ -31,6 +36,9 @@ def get_employees_by_dept(department):
     result = []
 
     # Add your implementation from here
+    for item in employee_data:
+        if str(item["department"]) == department:
+            result.append(item)
 
 
     return result
